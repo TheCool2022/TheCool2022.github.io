@@ -15,21 +15,19 @@
     </script>
     <script src="script.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-
-
+    <script src="hi.js"></script>
 
     <link rel="icon" type="image/png" href="NP.png">
-    <title>NetroPolis - תשאלו אותנו</title>
+    <title>NetroPolis - דף הבית</title>
 
 
 
 
 
 </head>
+<header>
 
-<body dir="rtl">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
         <div class="container-fluid">
             <nav class="navbar bg-body-tertiary">
                 <div class="container-fluid">
@@ -47,7 +45,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">דף הבית</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">דף הבית</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="players.html">שחקנים</a>
@@ -68,7 +66,7 @@
                         <a class="nav-link" href="tipsandupdates.html">טיפים ועדכונים</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="askus.html">תשאלו אותנו / תגובות</a>
+                        <a class="nav-link" href="askus.html">תשאלו אותנו / תגובות</a>
                     </li>
             </div>
             <div class="mode" style="color: white;">
@@ -83,52 +81,77 @@
     <br>
     <br>
     <div>
+    </div>
+
+</header>
+
+
+
+<body dir="rtl">
+
+
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 sticky-top" dir="rtl">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">הסבר על השרת</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">מה האתר יראה</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+
+        <p class="hp-p" id="scrollspyHeading1">
+            NETROPOLIS הוא שרת מיינקראפט סורבייבל
+            <br>
+            בשרת השחקנים נמצאים בתוך עמק מוקף בהרים
+            <br>
+            והם צריכים לשרוד את המשחק ולהנות
+            <br>
+            <br>
+            <img src="https://cdn.discordapp.com/attachments/962995975822143498/1074326824043167744/image.png"
+                alt="Image" width="742px">
+            <br>
+        </p>
+
+        <p class="hp-p" id="scrollspyHeading2">
+            <br>
+            האתר יראה:
+            <br>
+            <br>
+            <br>
+            סרטוני משחק על השרת
+            <br>
+            <br>
+            מידע על השרת
+            <br>
+            <br>
+            עלילות השחקנים בשרת
+            <br>
+            <br>
+            עדכונים על השרת
+            <br>
+            ועוד...
+        </p>
 
     </div>
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-
-
-
-    <center>
-
-
-
-
-        <h1>תשאלו אותנו!</h1>
-        <br>
-        <div class="emailborder">
-            <h5>שם פרטי:</h5>
-            <form action="#" onsubmit="sendEmail(); this.reset(); return false">
-                <input type="text" name="firstName" class="form-control" autocomplete="off" required>
-                <h5>שם משפחה:</h5>
-                <input type="text" name="lastName" class="form-control" autocomplete="off" required>
-                <h5>אימייל:</h5>
-                <input type="email" name="email" class="form-control" autocomplete="off" required>
-                <br>
-                <h5>טקסט חופשי:</h5>
-                <textarea name="messageContent" rows="5" class="form-control" id="free-text" required></textarea>
-                <br>
-                <input type="submit" class="btn btn-success" value="שלח">
-            </form>
-        </div>
-        <br>
-        <h5 style="display:none;" id="sent-success"> ההודעה נשלחה בהצלחה! אצור איתך קשר בהקדם </h5>
-        <br>
-        </div>
-    </center>
-
-
-
-
-
-
-
-
-
-
-
-    <nav class="navbar bg-body-tertiary sticky-bottom">
+    <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
             <img src="LogoP2.png" height="50px">
             <a href="https://www.youtube.com/@TheCool2022" target="_blank">
@@ -149,81 +172,7 @@
             </a>
         </div>
     </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script>
-        function sendEmail() {
-            let firstName = document.querySelector('[name="firstName"]').value;
-            let lastName = document.querySelector('[name="lastName"]').value;
-            let email = document.querySelector('[name="email"]').value;
-            let message = document.querySelector('[name="messageContent"]').value;
-            let date = new Date();
-
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "jhsagdf@gmail.com",
-                Password: "5AF80B92ADAA3DA5DD625D7BBC4B593EA91F",
-                From: "jhsagdf@gmail.com",
-                To: "thecool.ih@gmail.com",
-                Subject: `${firstName} ${lastName} שלח/ה לך הודעה מהאתר`,
-                Body: `
-        
-    <b>הודעה מאת:</b> ${firstName} ${lastName}
-    <br>
-    <br>
-    <b>כתובת איימיל של השולח:</b> ${email}
-    <br>
-    <br>
-    <b>נשלח בתאריך:</b> ${date}
-    <br>
-    <br>
-    <b>תוכן ההודעה:</b>
-    <br>
-    ${message}`
-            });
-
-            document.querySelector('#sent-success').style = 'display:block';
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         $(".change").on("click", function () {
             if ($("body").hasClass("dark")) {
                 $("body").removeClass("dark");
