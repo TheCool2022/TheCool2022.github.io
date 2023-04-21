@@ -1,1 +1,0 @@
-# TheCool2022.github.io
